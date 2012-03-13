@@ -62,6 +62,12 @@ body {
 	bottom: -150px;
 }
 
+#copyright {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
 
 @-webkit-keyframes move {
 	0% {
