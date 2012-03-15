@@ -46,13 +46,13 @@ body {
 	max-height: 200px;
 	max-width: 200px;
 	position: absolute;
-	left: 10px;
+	left: -150px;
 	bottom: 650px;
 }
 
 #shark2_container {
 	position: absolute;
-	right: 10px;
+	left: 750px;
 	bottom: 400px;
 	overflow: hidden;
 }
@@ -68,8 +68,27 @@ body {
 	right: 10px;
 }
 
+#boat:hover {
+	-webkit-animation-name: boat_move;
+}
 
-@-webkit-keyframes move {
+#boat:hover ~ #shark2_container #shark2 {
+	-webkit-animation-name: shark2_attack;
+}
+
+#boat:hover ~ #crab {
+	-webkit-animation-name: crab_attack;
+}
+
+#boat:hover, #boat:hover ~ #shark2_container #shark2, #boat:hover ~ #crab {
+	-webkit-animation-duration: 20s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes boat_move {
 	0% {
 		
 	}
@@ -141,14 +160,6 @@ body {
 	}
 }
 
-#boat:hover {
-	-webkit-animation-name: move;
-	-webkit-animation-duration: 20s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-direction: normal;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-fill-mode: forwards;
-}
 
 @-webkit-keyframes shark2_attack {
 	0% { }
@@ -163,12 +174,15 @@ body {
 	
 }
 
-#boat:hover ~ #shark2_container #shark2 {
-	-webkit-animation-name: shark2_attack;
-	-webkit-animation-duration: 20s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-direction: alternate;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-fill-mode: forwards;
+@-webkit-keyframes crab_attack {
+	0% { }
+	/* transform from I to J */
+	8% {
+		left: -150px;
+	}
+	9% {
+		left: 80px;
+	}
+	100% { }
+	
 }
-
