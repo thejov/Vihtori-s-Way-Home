@@ -44,14 +44,79 @@ body {
 	max-width: 400px;
 }
 
-#boat {
-	cursor:pointer;
+#boat_outer_container {
 	position: absolute;
-	bottom: -120px;
-    	left: 10px;
-	max-height: 300px;
-	max-width: 300px;
+	width: 300px;
+	height: 300px;
+	z-index: 1;
 }
+
+#boat {
+	display: none;
+}
+
+#boat_outer_container {
+	-webkit-perspective: 1000;
+}
+
+#boat_container {
+	width: 100%;
+	height: 100%;	
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 1.0s;	
+}
+
+#boat_outer_container:hover #boat_container {
+	-webkit-transform: rotateY(180deg); /* tää pistetään animaation sisälle. */
+/* lisäksi piilota boat_bottom */
+}
+
+#boat_container img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+}
+
+#boat {
+	display: block;
+	-webkit-transform: rotateY(180deg);
+}
+
+/*
+
+
+#boat_outer_container {
+	-webkit-perspective: 1000;
+	cursor:pointer;
+	position: relative;
+
+}
+
+#boat_container {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1.0s linear;
+	width: 100%;
+	height: 100%;	
+	position: absolute;
+}
+
+
+#boat_container img {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+}
+
+#boat_outer_container:hover #boat_container {
+	-webkit-transform: rotateY(180deg);
+}
+
+#boat_outer_container:hover ~ boat {
+	-webkit-transform: rotateY(180deg);
+}*/
 
 #crab {
 	max-height: 200px;
@@ -114,37 +179,37 @@ body {
 	right: 10px;
 }
 
-#boat:hover {
+#boat_container:hover {
 	-webkit-animation-name: boat_move;
 }
 
-#boat:hover ~ #crab {
+#boat_container:hover ~ #crab {
 	-webkit-animation-name: crab_attack;
 }
 
-#boat:hover ~ #shark1 {
+#boat_container:hover ~ #shark1 {
 	-webkit-animation-name: shark1_attack;
 }
 
-#boat:hover ~ #shark2_container #shark2 {
+#boat_container:hover ~ #shark2_container #shark2 {
 	-webkit-animation-name: shark2_attack;
 }
 
-#boat:hover ~ #end_text {
+#boat_container:hover ~ #end_text {
 	-webkit-animation-name: show_congrats;
 }
 
-#boat:hover ~ #acorn {
+#boat_container:hover ~ #acorn {
 	-webkit-animation-name: acorn_throw;
 }
 
-#boat:hover ~ #explosion {
+#boat_container:hover ~ #explosion {
 	-webkit-animation-name: acorn_explosion;
 }
 
-#boat:hover, #boat:hover ~ #crab, #boat:hover ~ #shark1,
-#boat:hover ~ #shark2_container #shark2, #boat:hover ~ #acorn, 
-#boat:hover ~ #end_text, #boat:hover ~ #explosion {
+#boat_container:hover, #boat_container:hover ~ #crab, #boat_container:hover ~ #shark1,
+#boat_container:hover ~ #shark2_container #shark2, #boat_container:hover ~ #acorn, 
+#boat_container:hover ~ #end_text, #boat_container:hover ~ #explosion {
 	-webkit-animation-duration: 20s;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-direction: alternate;
@@ -152,8 +217,8 @@ body {
 	-webkit-animation-fill-mode: forwards;
 }
 
-#boat:hover ~ #acorn, #boat:hover ~ #end_text, 
-#boat:hover ~ #explosion {
+#boat_container:hover ~ #acorn, #boat_container:hover ~ #end_text, 
+#boat_container:hover ~ #explosion {
 	-webkit-animation-duration: 40s;
 }
 
