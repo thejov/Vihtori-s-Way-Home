@@ -158,9 +158,6 @@ body {
 }
 
 @-webkit-keyframes boat_move {
-	0% {
-		
-	}
 	/* transform from A to B */
 	10% {
 		-webkit-transform: rotate(0deg);		
@@ -208,15 +205,12 @@ body {
 		left: 850px;
 		bottom: 10px;
 	}
-
     70% {
         -webkit-transform: rotate(0deg);
     }
-
 	74% {
 	    -webkit-transform: rotateY(60deg);
 	}
-
 	/* transform from I to J */
 	75% {
 		left: 850px;
@@ -239,7 +233,6 @@ body {
 }
 
 @-webkit-keyframes crab_attack {
-	0% { }
 	/* transform from A to B */
 	8% {
 		left: -150px;
@@ -247,12 +240,9 @@ body {
 	9% {
 		left: 80px;
 	}
-	100% { }
-	
 }
 
 @-webkit-keyframes shark1_attack {
-	0% { }
 	/* transform from C to D */
 	15% {
 		-webkit-transform: scale(0.3);
@@ -270,12 +260,9 @@ body {
 		-webkit-transform: scale(0.3);
 		opacity: 0;
 	}
-	100% { }
-	
 }
 
 @-webkit-keyframes shark2_attack {
-	0% { }
 	/* transform from J to K */
 	68% {
 		bottom: -150px;
@@ -286,12 +273,9 @@ body {
 	78% {
 		bottom: 0px;
 	}
-	100% { }
-	
 }
 
 @-webkit-keyframes acorn_throw {
-	0% { }
 	50% {
 		left: 180px;
 		bottom: 920px;
@@ -330,17 +314,14 @@ body {
 		-webkit-transform: rotate(1080deg);
 		opacity: 0;
 	}
-	
 }
 
 @-webkit-keyframes acorn_explosion {
-	0% { }
 	67% {
 		opacity: 0;
 		-webkit-transform: scale(1);
 	}
-	69% { 
-		
+	69% {
 		-webkit-transform: scale(10) skew(-40deg, -30deg);				
 		opacity: 1;
 	}
@@ -369,13 +350,9 @@ body {
 	82% {
 		opacity: 0;
 	}
-	100% {  
-	}
-	
 }
 
 @-webkit-keyframes show_congrats {
-	0% { }	
 	82% {
 		opacity: 0;
 	}
@@ -393,8 +370,6 @@ body {
 	93% {
 		opacity: 0;
 	}
-	100% { }
-	
 }
 
 
