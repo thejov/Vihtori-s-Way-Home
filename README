@@ -1,3 +1,7 @@
-Vihtori's Way Home is a browser based game implemented only with CSS3 and HTML.
+Vihtori's Way Home is a browser based animation implemented only with CSS3 and HTML.
+
+We wanted to do a proof of concept on what can be achieved by using only these two
+technologies and e.g. no javascript. We experimented on some of CSS3's new features,
+ e.g. animation and 2D/3D-transformations.
 
 Implementation was done mainly in pair programming on one computer, so all commits are only from one developer. Yet all the work was actually divided 50/50.
